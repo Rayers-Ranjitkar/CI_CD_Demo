@@ -1,21 +1,28 @@
-name: CI Demo
+name: Node.js CI                      # The name of the workflow shown in the Actions tab
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on:                                   # What triggers this workflow?
+  push:                               # Run on every push to these branches
+    branches: [ "main" ]
+  pull_request:                       # Run on every PR targeting these branches
+    branches: [ "main" ]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  test-job:                           # Unique ID for the job
+    name: Run Unit Tests              # Human-readable name
+    runs-on: ubuntu-latest            # The virtual machine environment (Runner)
+
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
-    - name: Install dependencies
-      run: npm install
-    - name: Run tests
-      run: npm test
+      - name: Checkout Code           # Step 1: Pull your code onto the runner
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js           # Step 2: Install Node.js on the runner
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20            # Best practice: specify a LTS version
+          cache: 'npm'                # Optimization: caches dependencies for faster runs
+
+      - name: Install Dependencies    # Step 3: Install packages
+        run: npm ci                   # 'npm ci' is faster & cleaner for CI than 'npm install'
+
+      - name: Run Jest Tests          # Step 4: Execute the test script
+        run: npm test                 # This runs 'jest' as defined in package.json
