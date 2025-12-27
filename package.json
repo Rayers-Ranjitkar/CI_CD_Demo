@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest" 
+    "test": "npx jest" 
   },
   "_comment" : "we are telling node that When someone runs npm test (or npm run test), execute the command jest. jest is a testing framework. When you run npm test: Node looks in package.json for the test script.",
   "keywords": [],
