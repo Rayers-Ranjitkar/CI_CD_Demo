@@ -6,11 +6,11 @@
   "scripts": {
     "test": "npx jest"
   },
-  "_comment": "we are telling node that When someone runs npm test (or npm run test), execute the command jest. jest is a testing framework. When you run npm test: Node looks in package.json for the test script.",
+  "_comment": "we are telling node that When someone runs npm test (or npm run test), execute the command jest. jest is a testing framework. When you run npm test: Node looks in package.json for the test script. + Changed type commonjs to module. This tells Node you’re using ES modules",
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
     "jest": "^29.7.0"
   }
