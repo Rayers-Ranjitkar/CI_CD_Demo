@@ -1,10 +1,6 @@
 // utils.js
 function add(a, b) {
-  return a + b + 0;
+  return a + b + 5;
 }
     
-function multiply(a,b){
-    return a*b;
-}
-
-module.exports = { add, multiply };
+module.exports = { add };
