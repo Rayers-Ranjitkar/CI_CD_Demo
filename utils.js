@@ -1,6 +1,6 @@
 // utils.js
 function add(a, b) {
-  return a + b + 5;
+  return a + b + 0;
 }
     
 function multiply(a,b){
