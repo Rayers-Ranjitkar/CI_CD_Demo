@@ -8,7 +8,7 @@ function multiply(a,b){
 }
 
 function substraction(a,b){
-    return a-b-10;
+    return a-b;
 }
 
 module.exports = { add, multiply, substraction };
