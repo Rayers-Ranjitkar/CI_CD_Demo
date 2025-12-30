@@ -10,5 +10,5 @@ test('multiplies 3 * 2 correctly', () => {
 });
 
 test('substracts 8 - 5 correctly',()=>{
-    expect(substract(8,5).toBe(3) );
+    expect(substraction(8,5).toBe(3) );
 })
