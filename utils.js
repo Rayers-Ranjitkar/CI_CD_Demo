@@ -11,4 +11,7 @@ function substraction(a,b){
     return a-b;
 }
 
-module.exports = { add, multiply, substraction };
+module.exports = { add, multiply, substraction }; 
+
+//displaying changes in index.html
+document.getElementById("result").textContent = `2 + 3 = ${add(2, 3)}`;
