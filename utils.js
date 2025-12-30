@@ -1,15 +1,14 @@
 // utils.js
-function add(a, b) {
+export function add(a, b) {
   return a + b + 0;
 }
     
-function multiply(a,b){
+export function multiply(a,b){
     return a*b;
 }
 
-function substraction(a,b){
+export function substraction(a,b){
     return a-b;
 }
 
-module.exports = { add, multiply, substraction }; 
-
+// module.exports = { add, multiply, substraction }; 

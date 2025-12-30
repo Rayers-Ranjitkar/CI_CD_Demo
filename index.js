@@ -1,4 +1,7 @@
-const { add, multiply,substraction } = require('../utils');
+// const { add, multiply,substraction } = require('../utils');
+import { add } from "./utils.js";
+
 
 //displaying changes in index.html
-document.getElementById("result").textContent = `2 + 3 = ${add(2, 3)}`;
+document.getElementById("resultAdd").textContent = `2 + 3 = ${add(2, 3)}`;
+
