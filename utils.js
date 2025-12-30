@@ -7,4 +7,8 @@ function multiply(a,b){
     return a*b;
 }
 
-module.exports = { add, multiply };
+function substraction(a,b){
+    return a-b-10;
+}
+
+module.exports = { add, multiply, substraction };

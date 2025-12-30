@@ -1,0 +1,19 @@
+*   [33m9d8d1d5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge pull request #2 from Rayers-Ranjitkar/adding_multiplication_feature
+[31m|[m[32m\[m  
+[31m|[m * [33mb8876e5[m[33m ([m[1;31morigin/adding_multiplication_feature[m[33m, [m[1;32madding_multiplication_feature[m[33m)[m debugged the add logic
+[31m|[m * [33mfc31e64[m added a new multiply function
+[31m|[m[31m/[m  
+* [33m7b1d045[m causing error
+* [33mf1d34cd[m edited yaml file
+* [33m26e43e5[m final changes made finally done
+* [33m6232a80[m there was importing errors, fixed that changed in package.json , type: "commonjs" which was old way of importing to type : "module" the new way of importing
+* [33m222c23f[m changed to the right expected output
+* [33m6389e85[m made some real changes in package.json, added lower version of jest
+* [33m5bf25a8[m made changes in package.json, added jest
+* [33m608c846[m changed package.json
+* [33m0b57ae5[m Adding CI Workflow
+*   [33mc1bce8a[m Merge pull request #1 from Rayers-Ranjitkar/added_0_in_add
+[33m|[m[34m\[m  
+[33m|[m * [33mc027b19[m[33m ([m[1;31morigin/added_0_in_add[m[33m, [m[1;32madded_0_in_add[m[33m)[m added_0_to_aPlusb
+[33m|[m[33m/[m  
+* [33mf7dc0cd[m first_test_case_check
