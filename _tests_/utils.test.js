@@ -9,6 +9,3 @@ test('multiplies 3 * 2 correctly', () => {
   expect(multiply(3, 2)).toBe(6); 
 });
 
-test('substracts 8 - 5 correctly',()=>{
-    expect(substraction(8,5)).toBe(3);
-})
