@@ -1,28 +1,27 @@
-name: Node.js CI                      # The name of the workflow shown in the Actions tab
+name: Node.js CI Workflow Design   
 
-on:                                   # What triggers this workflow?
+on:                                   # When should this workflow run?
   push:                               # Run on every push to these branches
     branches: [ "main" ]
   pull_request:                       # Run on every PR targeting these branches
     branches: [ "main" ]
 
 jobs:
-  test-job:                           # Unique ID for the job
-    name: Run Unit Tests              # Human-readable name
-    runs-on: ubuntu-latest            # The virtual machine environment (Runner)
+  test-job:                          
+    name: Run Unit Tests              
+    runs-on: ubuntu-latest            # What machine runs the job : Ubuntu-> GitHub-hosted Linux VM
+    steps:                            # Individual steps to execute in the job in order
+      - name: Checkout Code          
+        uses: actions/checkout@v4     # 1: Pulling our code in the VM runner
 
-    steps:
-      - name: Checkout Code           # Step 1: Pull your code onto the runner
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js           # Step 2: Install Node.js on the runner
-        uses: actions/setup-node@v4
+      - name: Setup Node.js           
+        uses: actions/setup-node@v4   # 2: Setting up Node.js environment in the VM runner
         with:
-          node-version: 20            # Best practice: specify a LTS version
-          cache: 'npm'                # Optimization: caches dependencies for faster runs
+          node-version: 20            
+          cache: 'npm'                # Optimization: caches dependencies for faster runs # no need to download everytime
 
-      - name: Install Dependencies    # Step 3: Install packages
-        run: npm ci                   # 'npm ci' is faster & cleaner for CI than 'npm install'
+      - name: Install Dependencies    
+        run: npm ci                   # 'npm ci' is faster & cleaner for CI than 'npm install' so used it
 
-      - name: Run Jest Tests          # Step 4: Execute the test script
+      - name: Run Jest Tests          # 4: Executing the test script
         run: npm test                 # This runs 'jest' as defined in package.json
